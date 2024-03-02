@@ -1,24 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/styles/reset.css" />
+    <link rel="stylesheet" href="./assets/styles/styles.css" />
     <title>Coding | Quiz</title>
 </head>
+
 <body>
     <header>
         <ul class="header">
-            <li><a href="#" id="highscore">View high scores</a></li>
+            <li>
+                <a href="#" id="highscore">View high scores</a>
+            </li>
             <li>Time: <span id="timer"></span></li>
         </ul>
     </header>
     <main>
-        <section class="homepage">
-            <h1 class="center" data-state="hidden">Coding Quiz Challenge</h1>
-            <p class="center" data-state="hidden">To start the quiz hit the button down below 👇🏽. You will have 60 seconds to compete the quiz and for each question you get wrong you will lose 5 seconds. Can you beat the Highscore? 😎</p>
-            <button id="start-button" data-state="hidden">Start Quiz</button>
+        <section class="homepage container" data-state="visible">
+            <h1 class="center" data-state="hidden">
+                Coding Quiz Challenge
+            </h1>
+            <p class="center" data-state="hidden">
+                To start the quiz hit the button down below 👇🏽. You will have 60
+                seconds to compete the quiz and for each question you get wrong
+                you will lose 5 seconds. Can you beat the Highscore? 😎
+            </p>
+            <button id="start-button" data-state="hidden">
+                Start Quiz
+            </button>
+        </section>
+        <section class="quiz container" data-state="hidden">
+            <h2 class="quiz-question" id="quiz-question"></h2>
+            <ul class="question-list">
+                <li>
+                    <button class="button" id="answer-button1"></button>
+                </li>
+                <li>
+                    <button class="button" id="answer-button2"></button>
+                </li>
+                <li>
+                    <button class="button" id="answer-button3"></button>
+                </li>
+                <li>
+                    <button class="button" id="answer-button4"></button>
+                </li>
+            </ul>
+            <section class="feedback-container">
+                <span id="feedback">Wrong</span>
+            </section>
+        </section>
+
+        <section class="finalscore container" data-state="hidden">
+            <h2>All done!</h2>
+            <p>You're final score is <span id="finalscore"></span></p>
+            <section class="initial-sub-container">
+                <label for="initials">Enter Initials:
+                    <input type="text" id="initials" /></label>
+                <button type="submit" id="submit-initials">
+                    Submit
+                </button>
+            </section>
+        </section>
+
+        <section class="highscore container" data-state="hidden">
+            <h2>HighScores</h2>
+            <ul class="highscoreli"></ul>
+            <section class="button-container">
+                <button id="go-back">Go Back</button>
+                <button id="clear-hs">Clear Highscores</button>
+            </section>
         </section>
     </main>
     <script src="./assets/script.js"></script>
 </body>
+
 </html>
