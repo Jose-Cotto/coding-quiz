@@ -4,6 +4,11 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet" />
     <link rel="stylesheet" href="./assets/styles/reset.css" />
     <link rel="stylesheet" href="./assets/styles/styles.css" />
     <title>Coding | Quiz</title>
@@ -15,45 +20,55 @@
             <li>
                 <a href="#" id="highscore">View high scores</a>
             </li>
-            <li>Time: <span id="timer"></span></li>
+            <li class="time">Time: <span id="timer"></span></li>
         </ul>
     </header>
     <main>
-        <section class="homepage container" data-state="visible">
-            <h1 class="center" data-state="hidden">
-                Coding Quiz Challenge
-            </h1>
-            <p class="center" data-state="hidden">
+        <section class="homepage container" id="homepage-container">
+            <h1 class="title">Coding Quiz Challenge</h1>
+            <p class="center">
                 To start the quiz hit the button down below 👇🏽. You will have 60
                 seconds to compete the quiz and for each question you get wrong
                 you will lose 5 seconds. Can you beat the Highscore? 😎
             </p>
-            <button id="start-button" data-state="hidden">
+            <button class="start-button" id="start-button">
                 Start Quiz
             </button>
         </section>
-        <section class="quiz container" data-state="hidden">
-            <h2 class="quiz-question" id="quiz-question"></h2>
-            <ul class="question-list">
-                <li>
-                    <button class="button" id="answer-button1"></button>
-                </li>
-                <li>
-                    <button class="button" id="answer-button2"></button>
-                </li>
-                <li>
-                    <button class="button" id="answer-button3"></button>
-                </li>
-                <li>
-                    <button class="button" id="answer-button4"></button>
-                </li>
-            </ul>
-            <section class="feedback-container">
-                <span id="feedback">Wrong</span>
+        <section class="quiz container" id="quiz-container">
+            <section class="ques-answer-container">
+                <h2 class="quiz-question center" id="quiz-question">
+                    how many bingbongs will it take
+                </h2>
+                <ul class="question-list">
+                    <li>
+                        <button class="answer-button" id="answer-button1">
+                            yes
+                        </button>
+                    </li>
+                    <li>
+                        <button class="answer-button" id="answer-button2">
+                            no
+                        </button>
+                    </li>
+                    <li>
+                        <button class="answer-button" id="answer-button3">
+                            maybe
+                        </button>
+                    </li>
+                    <li>
+                        <button class="answer-button" id="answer-button4">
+                            so
+                        </button>
+                    </li>
+                </ul>
+                <section class="feedback-container">
+                    <span id="feedback" class="feedback">Wrong!</span> 
+                </section>
             </section>
         </section>
 
-        <section class="finalscore container" data-state="hidden">
+        <section class="finalscore container">
             <h2>All done!</h2>
             <p>You're final score is <span id="finalscore"></span></p>
             <section class="initial-sub-container">
@@ -65,7 +80,7 @@
             </section>
         </section>
 
-        <section class="highscore container" data-state="hidden">
+        <section class="highscore container">
             <h2>HighScores</h2>
             <ul class="highscoreli"></ul>
             <section class="button-container">
